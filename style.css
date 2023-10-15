@@ -1,0 +1,547 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit&display=swap');
+
+/* home page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background-color: #808080;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    text-transform: uppercase;
+}
+
+.navbar a{
+    font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+nav ul{
+    float: right;
+}
+
+nav ul li{
+    display: inline-block;
+}
+
+a:hover{
+    background: #fff;
+    color: #000;
+}
+
+/* login page */
+body.login{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper{
+    width: 420px;
+    background: #808080;
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+.wrapper h1{
+    font-size: 36px;
+    text-align: center;
+}
+
+.wrapper .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 1px solid#000;
+    border-radius: 40px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder{
+    color: #fff;
+}
+
+.input-box i{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #fff;
+}
+
+.wrapper .remember-forgot{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+.remember-forgot label input{
+    accent-color: #fff;
+    margin-right: 3px;
+}
+
+.remember-forgot a{
+    color: #000;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+
+.wrapper .btn{
+    width: 100%;
+    height: 45px;
+    background: #f5f5f5;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: #000;
+    cursor: pointer;
+    color: #000;
+    font-weight: 600;
+}
+
+.wrapper .register-link{
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.register-link p a{
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link p a:hover{
+    text-decoration: underline;
+}
+
+.navbar .active{
+    background-color: #f5f5f5;
+    color: #000;
+}
+
+.navbar .navbar1, .navbar2{
+    border: 2px solid #fff;
+    border-radius: 5px;
+}
+
+.navbar a.navbar1:hover, a.navbar2:hover{
+    border: 2px solid #000;
+}
+
+/* home page section */
+
+.h1{
+    text-align: center;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.h2{
+    text-align: center;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.video{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+p.p1{
+    text-align: center;
+    background-color: #d3d3d3;
+}
+
+#sneakers{
+    float: left;
+    margin-left: 100px;
+}
+
+h2.p2{
+    clear: right;
+    padding-top: 150px;
+}
+
+/* animation */
+@keyframes shoe {
+    0%   {background-color: #000;}
+    25%  {background-color: #a9a9a9;}
+    50%  {background-color: #808080;}
+    100% {background-color: #f5f5f5;}
+}
+  
+  /* The element to apply the animation to */
+.footer { 
+    background-color:#808080;
+    animation-name: shoe;
+    animation-duration: 10s;
+}
+
+div.link{
+    margin-left: 20px;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media (max-width: 952px){
+    nav ul li a{
+        font-size: 16px
+    }
+}
+
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #000;
+        top: 120px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a{
+        font-size: 20px;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+    }
+
+    div img#sneakers{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+
+    h2.p2{
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* nike, jordan, and adidas */
+
+.table{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* slideshow home page */
+
+.slidershow{
+    width: 700px;
+    height: 400px;
+    overflow: hidden;
+  }
+  .middle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .navigation{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+  }
+  .bar{
+    width: 50px;
+    height: 10px;
+    border: 2px solid #fff;
+    margin: 6px;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  .bar:hover{
+    background: #fff;
+  }
+  
+  input[name="r"]{
+      position: absolute;
+      visibility: hidden;
+  }
+  
+  .slides{
+    width: 500%;
+    height: 100%;
+    display: flex;
+  }
+  
+  .slide{
+    width: 20%;
+    transition: 0.6s;
+  }
+  .slide img{
+    width: 100%;
+    height: 100%;
+  }
+  
+  #r1:checked ~ .s1{
+    margin-left: 0;
+  }
+  #r2:checked ~ .s1{
+    margin-left: -20%;
+  }
+  #r3:checked ~ .s1{
+    margin-left: -40%;
+  }
+  #r4:checked ~ .s1{
+    margin-left: -60%;
+  }
+  #r5:checked ~ .s1{
+    margin-left: -80%;
+  }
+
+
+
+  /*  styles for prac 3 questions 1       */
+
+   /* Styling for the button */
+   .styled-button {
+    background-color: #0074d9; /* Change the background color as per your preference */
+    color: #fff; /* Text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.styled-button:hover {
+    background-color: #0056b3; /* Change the hover background color */
+}
+
+fieldset {
+    padding-top: 100px; /* Adjust the value as needed */
+}
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* ... (other styles) */
+  }
+  
+
+  body {
+    font-family: Arial, sans-serif;
+}
+
+/* Light Theme */
+.light-theme {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Dark Theme */
+.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #2C3E50;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.light-theme button {
+    background-color: #2E4053;
+    color: #fff;
+}
+
+.dark-theme button {
+    background-color: #1E1E1E;
+    color: #fff;
+}
+
+.view1 { background-color: #f0f0f0; }
+        .view2 { background-color: #732f2f; }
+        .view3 { background-color: #786161; }
+        .view4 { background-color: #b58e8e; }
+        .view5 { background-color: #ac1313; }
+
+
+
+
+        .slideshow-container {
+            position: relative;
+            text-align: center;
+            border: 2px solid #000; /* Medium black border around the text */
+        }
+        
+        .slideshow-image {
+            transition: opacity 0.5s ease-in-out; /* Add a fade-in/fade-out transition for images */
+        }
+        
+        .slideshow-text {
+            padding: 20px; /* Add some padding around the text */
+        }
+        
+        .slideshow-controls {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+        }
+        
+        button {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #333; /* Darker background color on hover */
+        }
+
+
+        #sneakers {
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        #caption {
+            padding-left: 250px;
+            font-size: 40px;
+            animation: breathe 4s infinite, blink 1s infinite alternate;
+            transform-style: preserve-3d;
+          }
+          
+          @keyframes breathe {
+            0% {
+              transform: scale(1);
+            }
+            50% {
+              transform: scale(1.1);
+            }
+            100% {
+              transform: scale(1);
+            }
+          }
+          
+          @keyframes blink {
+            0%, 100% {
+              opacity: 1;
+            }
+            50% {
+              opacity: 0;
+            }
+          }
+
+
+
+
+
+          /* Add your CSS styles here */
+        .dropdown {
+            display: none;
+            position: absolute;
+            background-color: #666666;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown a {
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown a:hover {
+            background-color: #f1f1f1;
+        }
+
+
+        
